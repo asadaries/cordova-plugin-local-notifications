@@ -399,7 +399,7 @@ public final class Builder {
         int reqCode = random.nextInt();
 
         PendingIntent deleteIntent = PendingIntent.getBroadcast(
-                context, reqCode, intent, FLAG_UPDATE_CURRENT);
+                context, reqCode, intent, PendingIntent.FLAG_MUTABLE);
 
         builder.setDeleteIntent(deleteIntent);
     }
@@ -428,7 +428,7 @@ public final class Builder {
         int reqCode = random.nextInt();
 
         PendingIntent contentIntent = PendingIntent.getService(
-                context, reqCode, intent, FLAG_UPDATE_CURRENT);
+                context, reqCode, intent, PendingIntent.FLAG_MUTABLE);
 
         builder.setContentIntent(contentIntent);
     }
